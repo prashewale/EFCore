@@ -43,6 +43,7 @@ namespace EFCore.Inventory.ConsoleApp
 
             using (var db = new InventoryDbContext(_optionsBuilder.Options))
             {
+                // created instance for items service
                 _itemsService = new ItemsService(db, _mapper);
                 _categoriesService = new CategoriesService(db, _mapper);
 
